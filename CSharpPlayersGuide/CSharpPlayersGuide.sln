@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{860D18FA-4E8B-4F46-B504-FCD38892098B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_5_Creating_Variables", "Chapter_5_Creating_Variables\Chapter_5_Creating_Variables.csproj", "{0C4C884E-1A68-432C-855B-8FE9DB235428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_6_Variable_Types", "Chapter_6_Variable_Types\Chapter_6_Variable_Types.csproj", "{EF5118FA-0DA2-462A-BCC7-54A6C40575AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0C4C884E-1A68-432C-855B-8FE9DB235428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C4C884E-1A68-432C-855B-8FE9DB235428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C4C884E-1A68-432C-855B-8FE9DB235428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5118FA-0DA2-462A-BCC7-54A6C40575AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5118FA-0DA2-462A-BCC7-54A6C40575AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5118FA-0DA2-462A-BCC7-54A6C40575AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5118FA-0DA2-462A-BCC7-54A6C40575AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
