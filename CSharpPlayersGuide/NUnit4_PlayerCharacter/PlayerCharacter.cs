@@ -56,10 +56,9 @@ namespace NUnit4_PlayerCharacter
         {
             Weapons = new List<string>()
             {
-                "Short Sword",
-                "Short Bow",
                 "Long Bow",
-
+                "Short Bow",
+                "Short Sword" 
                 //"Long Bow",
                 //"Staff Of Wonder"
             };
