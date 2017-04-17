@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_15_Methods", "Chapt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroesWorld", "HeroesWorld\HeroesWorld.csproj", "{5CE2CF6F-8A94-44DF-B202-441220638F2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroesWorld_Day2", "HeroesWorld_Day2\HeroesWorld_Day2.csproj", "{E0F866B5-F62D-4F95-B6B4-3915323E5541}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{5CE2CF6F-8A94-44DF-B202-441220638F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CE2CF6F-8A94-44DF-B202-441220638F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CE2CF6F-8A94-44DF-B202-441220638F2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F866B5-F62D-4F95-B6B4-3915323E5541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F866B5-F62D-4F95-B6B4-3915323E5541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F866B5-F62D-4F95-B6B4-3915323E5541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F866B5-F62D-4F95-B6B4-3915323E5541}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
