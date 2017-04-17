@@ -10,6 +10,7 @@ namespace Chapter_13_Arrays
     {
         static void Main(string[] args)
         {
+            
             // Declaring an array
             int[] _intArray;
             // Initilizaing an array
@@ -182,6 +183,32 @@ namespace Chapter_13_Arrays
             Console.WriteLine($"The minimum value is: {currentMinimum}");
             Console.WriteLine($"The average value is: {(double)total / (double)array.Length}");
 
+            string[] _stringArray1 = new string[] { "Andre", "Tim", "Brett" };
+            string[] _stringArray2 = (string[])_stringArray.Clone();
+            string[] _stringArray3 = new string[_stringArray.Length];
+
+            for(int i = 0; i < _stringArray3.Length; i++)
+            {
+                _stringArray3[i] = _stringArray1[i];
+            }
+
+            _stringArray3[2] = "Josh";
+            foreach (string name in _stringArray1)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (string name in _stringArray2)
+            {
+                Console.WriteLine(name);
+            }
+
+            
+            foreach (string name in _stringArray3)
+            {
+                Console.WriteLine(name);
+            }
+            
             Console.ReadKey();
 
 

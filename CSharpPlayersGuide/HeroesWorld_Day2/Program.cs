@@ -8,15 +8,26 @@ namespace HeroesWorld_Day2
 {
     class Program
     {
+        static private string[] invalidNames = new[] { "Legolas", "Gandalf", "Frodo", "Bilbo" };
+        enum Statistics
+        {
+            strength = 0,
+            perception,
+            endurance,
+            charisma,
+            intelligence,
+            agility,
+            luck
+        };
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter a Character's Name");
-            string name = Console.ReadLine().Trim();
-            bool validName = false;
-            string invalidName = "Legolas";
 
+            string name = CheckForInvalidNames();
+            int[] statistics = new int[Enum.GetNames(typeof(Statistics)).Length];
+            
+            // Replace this with Generate Stats Method - Start //
             // Statistics
-
             int strength = 0;
             int perception = 0;
             int endurance = 0;
@@ -24,6 +35,7 @@ namespace HeroesWorld_Day2
             int intelligence = 0;
             int agility = 0;
             int luck = 0;
+
             // Derived Stats
             int hitpoints = 0;
 
@@ -34,22 +46,9 @@ namespace HeroesWorld_Day2
 
 
             Random random = new Random();
-            int randomNumber = random.Next(0, 100); // This will return integers between 0-99;
+            //int randomNumber = random.Next(0, 100); // This will return integers between 0-99;
 
-            while (!validName)
-            {
-                if (name.Contains(invalidName))
-                {
-                    validName = false;
-                    Console.WriteLine($"You have entered a forbidden name: {invalidName}, please enter a valid name");
-                    name = Console.ReadLine();
-                }
-                else
-                {
-                    validName = true;
-                }
-
-            }
+            
             Console.WriteLine("Rolling your awesome stats...");
             // Generate Stats:
             while (playerTotalStats <= totalValueMinimum)
@@ -78,10 +77,16 @@ namespace HeroesWorld_Day2
 
             }
 
+            // Replace this with Generate Stats Method - End //
+
+
+            Console.WriteLine($"Welcome to HerosWorld (tm): {name}");
+            
+            // Create a Display Stats Function - Start //
 
             // Display Stats
 
-            Console.WriteLine($"Welcome to HerosWorld (tm): {name}");
+
 
             Console.WriteLine("Your Amazing Base Stats");
             Console.WriteLine("________________________");
@@ -97,6 +102,9 @@ namespace HeroesWorld_Day2
             Console.WriteLine("Your Amazing Derived Stats");
             Console.WriteLine("________________________");
             Console.WriteLine($"Hit Points: {hitpoints}");
+
+            // Create a Display Stats Function - End //
+
 
             Console.WriteLine("You encounter an rabid emotionally distant exploding feral deseased lonely slightly overweight kitten");
 
@@ -156,6 +164,46 @@ namespace HeroesWorld_Day2
                 Console.WriteLine($"{name}: Won the fight");
             }
             Console.ReadKey();
+        }
+
+        static string CheckForInvalidNames()
+        {
+            Console.WriteLine("Please Enter a Character's Name");
+            string name="";
+
+            bool validName = false;
+            while (!validName)
+            {
+                name = Console.ReadLine().Trim();
+                foreach (string invalid in invalidNames)
+                {
+
+                    if (name.Contains(invalid) || name.Length == 0)
+                    {
+                        validName = false;
+                        if (name.Length == 0)
+                        {
+                            Console.WriteLine($"You have entered a blank name, please enter a valid name");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"You have entered a forbidden name: {invalid}, please enter a valid name");
+                        }
+                        break;
+                    }
+                    else
+                    {
+                        validName = true;
+                    }
+                }
+            }
+            return name;
+        }
+
+        static int[] GenerateStats(int [] stats)
+        {
+
+            return null;
         }
     }
 }
