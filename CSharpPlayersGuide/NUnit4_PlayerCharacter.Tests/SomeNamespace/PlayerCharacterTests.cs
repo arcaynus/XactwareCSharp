@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace NUnit4_PlayerCharacter.Tests
+namespace NUnit4_PlayerCharacter.Tests.SomeNamespace
 {
     [TestFixture]
     public class PlayerCharacterTests
@@ -16,12 +16,12 @@ namespace NUnit4_PlayerCharacter.Tests
         [OneTimeSetUp]
         public void BeforeAnyTestsStarted()
         {
-            TestContext.Progress.WriteLine($"***Before any Tests Runs, Before Setup");
+            TestContext.Progress.WriteLine($"Before any Tests Runs, Before Setup");
         }
         [OneTimeTearDown]
         public void AfterAllTestsComplete()
         {
-            TestContext.Progress.WriteLine($"***After all Tests Runs, After last Teardown");
+            TestContext.Progress.WriteLine($"After all Tests Runs, After last Teardown");
         }
 
         [SetUp]

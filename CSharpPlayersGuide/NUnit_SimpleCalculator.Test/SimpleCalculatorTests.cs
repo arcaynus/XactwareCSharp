@@ -53,6 +53,33 @@ namespace NUnit_SimpleCalculator.Test
         // Is.Positive
         // Is.Negative
         // Is.NaN
+        [Test]
+        public void ShouldErrorWhenDivideByZero()
+        {
+            var sut = new SimpleCalculator();
+            Assert.That(()=> sut.Divide(200,0), Throws.Exception);
+        }
+        [Test]
+        public void ShouldErrorWhenDivideByZero_ExplicitExceptionType()
+        {
+            var sut = new SimpleCalculator();
+            Assert.That(() => sut.Divide(50, 0), Throws.TypeOf<DivideByZeroException>());
+        }
+        [Test]
+        public void ShouldErrorWhenNumberTooBig()
+        {
+            var sut = new SimpleCalculator();
+            Assert.That(() => sut.Divide(200, 2), Throws.TypeOf<ArgumentOutOfRangeException>());
+        }
+        [Test]
+        public void ShouldErrorWhenNumberTooBig_MoreExplicit()
+        {
+            var sut = new SimpleCalculator();
+            Assert.That(() => sut.Divide(200, 2),
+                Throws.TypeOf<ArgumentOutOfRangeException>().With.Matches<ArgumentOutOfRangeException>(x=> x.ParamName == "value"));
+        }
+
+
 
     }
 }

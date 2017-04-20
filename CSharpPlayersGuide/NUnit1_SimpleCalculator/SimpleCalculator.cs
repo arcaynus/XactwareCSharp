@@ -22,7 +22,7 @@ namespace NUnit1_SimpleCalculator
         {
             if (value > 100)
             {
-                throw new ArgumentOutOfRangeException("by"); // for demo
+                throw new ArgumentOutOfRangeException(nameof(value)); // for demo
             }
             return value / by;
         }
