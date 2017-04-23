@@ -47,7 +47,7 @@ namespace Chapter_19_Properties
         override
         public string ToString()
         {
-            return $"Size: {Size}, Color: (R {color.Red:X} G {color.Green:X} B {color.Blue:X}, Times Thrown: {timesThrown}, Popped: {Size == 0}";
+            return $"Size: {Size}, Color: (R {color.Red:X} G {color.Green:X} B {color.Blue:X}, Times Thrown: {TimesThrown}, Popped: {Size == 0}";
         }
     }
 }
